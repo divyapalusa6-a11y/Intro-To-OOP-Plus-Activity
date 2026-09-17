@@ -14,5 +14,5 @@ class Student:
         return len(self.classes)
     
     def summary(self):
-        return f"{self.name.capitalize()} is a {self.grade} in {self.get_num_classes()} classes"
+        return f"{self.name.capitalize()} is a {self.grade} enrolled in {self.get_num_classes()} classes"
     
