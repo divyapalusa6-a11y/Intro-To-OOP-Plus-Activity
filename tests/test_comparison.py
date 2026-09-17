@@ -36,3 +36,14 @@ def test_get_student_name_with_more_classes():
     result = get_student_with_more_classes(student_1, student_2)
 
     assert result == "Samara"
+    
+# additional case: when both students have the same number of classes, the first student should be returned
+def test_students_have_same_number_of_classes():
+    student_1 = Student("Samara", "junior", ["English", "Math"])
+    student_2 = Student("Claire", "freshman", ["Science", "History"])
+    
+    result = get_student_with_more_classes(student_1, student_2)
+    
+    assert result == "Samara"
+
+    

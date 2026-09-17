@@ -55,3 +55,14 @@ def test_gets_expected_summary():
     result = student.summary()
 
     assert result == "Samara is a junior enrolled in 6 classes"
+
+# Additional case: when a student has no classes, the summary should indicate that they are enrolled in 0 classes
+
+def test_student_with_no_classes():
+    name = NAME_1
+    grade = GRADE_1
+    classes = []
+    student = Student(name, grade, classes)
+    
+    result = student.summary()
+    assert result == "Samara is a junior enrolled in 0 classes"

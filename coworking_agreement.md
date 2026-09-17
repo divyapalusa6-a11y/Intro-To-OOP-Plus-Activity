@@ -21,8 +21,8 @@ Talk through each section with your team. Add notes on what you discussed and ag
 *Other co-working agreements that were not captured in the above sections.*
 
 ## Signatures
+___Divya____________
+____Rayne___________
+___Yan____________
 _______________
-_______________
-_______________
-_______________
-Date: _________
+Date: ___09/17/2026______
