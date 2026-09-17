@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 def get_student_with_more_classes(student1, student2):
     if student1.get_num_classes() >= student2.get_num_classes():
+=======
+# add your get_student_with_more_classes function here!
+def get_student_with_more_classes(student1, student2):
+    if student1.get_num_classes() > student2.get_num_classes():
+>>>>>>> 5955317aede9fc51de4fad8a77f0a31309e6cf24
         return student1.name
     else:
         return student2.name
