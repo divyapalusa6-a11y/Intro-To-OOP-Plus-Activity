@@ -36,3 +36,53 @@ def test_get_student_name_with_more_classes():
     result = get_student_with_more_classes(student_1, student_2)
 
     assert result == "Samara"
+
+# Additional tests
+
+def test_correct_student_when_inputs_reversed():
+    name_1 = NAME_1
+    grade_1 = GRADE_1
+    classes_1 = list(CLASSES_1)
+    classes_1.append("Painting")
+    student_1 = Student(name_1, grade_1, classes_1)
+
+    name_2 = NAME_2
+    grade_2 = GRADE_2
+    classes_2 = list(CLASSES_2)
+    student_2 = Student(name_2, grade_2, classes_2)
+
+    result = get_student_with_more_classes(student_2, student_1)
+
+    assert result == "Samara"
+
+def test_picks_first_student_on_tie():
+    name_1 = NAME_1
+    grade_1 = GRADE_1
+    classes_1 = list(CLASSES_1)
+    student_1 = Student(name_1, grade_1, classes_1)
+
+    name_2 = NAME_2
+    grade_2 = GRADE_2
+    classes_2 = list(CLASSES_2)
+    classes_2.append("Painting")
+    student_2 = Student(name_2, grade_2, classes_2)
+
+    result = get_student_with_more_classes(student_1, student_2)
+
+    assert result == "Samara"
+
+def test_picks_first_student_on_tie_reversed():
+    name_1 = NAME_1
+    grade_1 = GRADE_1
+    classes_1 = list(CLASSES_1)
+    student_1 = Student(name_1, grade_1, classes_1)
+
+    name_2 = NAME_2
+    grade_2 = GRADE_2
+    classes_2 = list(CLASSES_2)
+    classes_2.append("Painting")
+    student_2 = Student(name_2, grade_2, classes_2)
+
+    result = get_student_with_more_classes(student_2, student_1)
+
+    assert result == "Claire"

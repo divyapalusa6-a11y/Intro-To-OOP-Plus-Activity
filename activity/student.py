@@ -14,5 +14,6 @@ class Student:
         return len(self.classes)
     
     def summary(self):
-        return f"{self.name.capitalize()} is a {self.grade} enrolled in {self.get_num_classes()} classes"
-    
+        class_counter = "class" if self.get_num_classes() == 1 else "classes"
+
+        return f"{self.name.capitalize()} is a {self.grade} enrolled in {self.get_num_classes()} {class_counter}"

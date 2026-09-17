@@ -55,3 +55,51 @@ def test_gets_expected_summary():
     result = student.summary()
 
     assert result == "Samara is a junior enrolled in 6 classes"
+
+# Additional tests
+
+def test_add_additional_class_to_empty():
+    name = NAME_1
+    grade = GRADE_1
+    classes = []
+    classes_added = []
+    classes_added.append("Painting")
+    student = Student(name, grade, classes)
+
+    result = student.add_class("Painting")
+
+    assert student.classes == classes_added
+    assert result == classes_added
+
+def test_add_additional_class_to_one():
+    name = NAME_1
+    grade = GRADE_1
+    classes = ["Pre-Calc"]
+    classes_added = ["Pre-Calc"]
+    classes_added.append("Painting")
+    student = Student(name, grade, classes)
+
+    result = student.add_class("Painting")
+
+    assert student.classes == classes_added
+    assert result == classes_added
+
+def test_gets_expected_summary_no_classes():
+    name = NAME_1
+    grade = GRADE_1
+    classes = []
+    student = Student(name, grade, classes)
+
+    result = student.summary()
+
+    assert result == "Samara is a junior enrolled in 0 classes"
+
+def test_gets_expected_summary_one_class():
+    name = NAME_1
+    grade = GRADE_1
+    classes = ["Pre-Calc"]
+    student = Student(name, grade, classes)
+
+    result = student.summary()
+
+    assert result == "Samara is a junior enrolled in 1 class"
