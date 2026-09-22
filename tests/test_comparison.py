@@ -46,4 +46,24 @@ def test_students_have_same_number_of_classes():
     
     assert result == "Samara"
 
+def test_first_student_has_no_classes():
+    """ fist students has no classes, return student_1 name """
+
+    student_1 = Student("Samara", "junior", [])
+    student_2 = Student("Claire", "freshman", ["Math"])
+
+    result = get_student_with_more_classes(student_1, student_2)
+
+    assert result == "Claire"
+
+
+def test_second_student_has_no_classes():
+    """ I second student  has mno classes, return student_2 name """
     
+    student_1 = Student("Samara", "junior", ["Math"])
+    student_2 = Student("Claire", "freshman", [])
+
+    result = get_student_with_more_classes(student_1, student_2)
+
+    assert result == "Samara"
+   
